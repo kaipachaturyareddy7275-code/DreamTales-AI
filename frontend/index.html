@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌙 DreamTales AI - Personalized Bedtime Storyteller</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="stars"></div>
+
+    <div class="container">
+
+        <h1>🌙 DreamTales AI</h1>
+
+        <p class="subtitle">
+            Create magical bedtime stories personalized for every child.
+        </p>
+
+        <!-- Child Name -->
+        <input
+            type="text"
+            id="name"
+            placeholder="👦 Enter Child Name">
+
+        <!-- Age -->
+        <input
+            type="number"
+            id="age"
+            placeholder="🎂 Enter Age"
+            min="1"
+            max="12">
+
+        <!-- Character -->
+        <input
+            type="text"
+            id="character"
+            placeholder="🦸 Favorite Character (Astronaut, Dragon, Princess...)">
+
+        <!-- Theme -->
+        <input
+            type="text"
+            id="theme"
+            placeholder="📚 Moral / Theme (Kindness, Courage, Friendship...)">
+
+        <!-- Story Length -->
+        <label for="length">📏 Story Length</label>
+
+        <select id="length">
+            <option value="Short">Short</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Long">Long</option>
+        </select>
+
+        <!-- Story Style -->
+        <label for="style">✨ Story Style</label>
+
+        <select id="style">
+            <option value="Fantasy">Fantasy</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Space">Space</option>
+            <option value="Jungle">Jungle</option>
+            <option value="Ocean">Ocean</option>
+            <option value="Magic">Magic</option>
+            <option value="Superhero">Superhero</option>
+            <option value="Fairy Tale">Fairy Tale</option>
+        </select>
+
+        <hr>
+
+        <!-- Voice Input -->
+        <h3>🎙️ Voice Input</h3>
+
+        <button onclick="startVoiceInput()">
+            🎤 Speak Theme
+        </button>
+
+        <br><br>
+
+        <!-- Relaxing Music -->
+        <h3>🎵 Relaxing Bedtime Music</h3>
+
+        <p>
+            Play soothing piano music while enjoying your bedtime story.
+        </p>
+
+        <audio id="music" controls loop>
+            <source src="music/piano.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <br><br>
+
+        <div class="button-group">
+
+            <button
+                class="read-btn"
+                onclick="playMusic()">
+                ▶️ Play Music
+            </button>
+
+            <button
+                class="stop-btn"
+                onclick="pauseMusic()">
+                ⏸️ Pause Music
+            </button>
+
+        </div>
+
+        <hr>
+
+        <!-- Dark Mode -->
+        <button onclick="toggleTheme()">
+            🌙 Toggle Dark / Light Mode
+        </button>
+
+        <br><br>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+
+            <button
+                class="generate-btn"
+                onclick="generateStory()">
+                ✨ Generate Story
+            </button>
+
+            <button
+                class="read-btn"
+                onclick="readStory()">
+                🔊 Read Story
+            </button>
+
+            <button
+                class="stop-btn"
+                onclick="stopStory()">
+                ⏹ Stop Reading
+            </button>
+
+            <button
+                class="pdf-btn"
+                onclick="downloadPDF()">
+                📄 Download PDF
+            </button>
+
+        </div>
+
+         <!-- Story Cover -->
+        <div id="coverCard">
+
+            <h2 id="coverTitle">
+                📖 Personalized Bedtime Story
+            </h2>
+
+            <p id="coverDetails">
+                Your magical story awaits...
+            </p>
+
+        </div>
+
+        <!-- Story Output -->
+        <div id="story">
+
+            <div class="placeholder">
+                🌙 Your magical bedtime story will appear here...
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- Story Statistics -->
+        <div id="stats"></div>
+
+        <br>
+
+        <!-- Story History -->
+
+        <div id="history"></div>
+
+        <br>
+
+        <div id="storyCount"></div>
+
+        <footer>
+
+            <p>
+                🌟 DreamTales AI | Personalized Bedtime Story Generator
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
