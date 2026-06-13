@@ -110,6 +110,14 @@ frontend/index.html
 
 ---
 
+### SCREENSHOTS
+
+<img width="1920" height="1080" alt="Screenshot (554)" src="https://github.com/user-attachments/assets/745c682e-53a8-4c72-9d3f-c7327cd3fca8" />
+
+<img width="1920" height="1080" alt="Screenshot (555)" src="https://github.com/user-attachments/assets/617fddf5-af25-4111-b0c6-494500a7de9e" />
+
+
+
 ## 🎯 Future Enhancements
 
 * Story Illustrations
